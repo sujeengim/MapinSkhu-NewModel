@@ -22,4 +22,5 @@ import classApp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', classApp.views.test),
+    path('classroom/<str:room>/<int:id>/', classApp.views.classroom, name='classroom'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

@@ -1,1 +1,12 @@
 <h1>Map in SKHU</h1>
+{{ now_weekday}} {{ now_time }} <br><br>
+{% for rooms in rooms_list %}
+{{room_type}}
+    {{ rooms }} <br>
+    {% for classes in classes_list %}
+    {% if rooms == classes.room %}
+        {{ classes }}
+    {% endif %}
+    {% endfor %}
+<br>
+{% endfor %}
